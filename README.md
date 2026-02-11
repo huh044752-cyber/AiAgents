@@ -54,4 +54,8 @@
 
 - 更深入的架构说明、接口清单和开发流程，请参见仓库中的 `docs` 目录。
 - 所有 UI 文本、主题、快捷指令等均通过 `ui/ui_config/` 下的 JSON 配置热加载，适合根据自身场景定制。
+### 图片演示
+<img width="2533" height="1238" alt="image" src="https://github.com/user-attachments/assets/1a36a9e6-113f-46d1-82f8-cf7f2c68b5d4" />
+<img width="2538" height="1238" alt="image" src="https://github.com/user-attachments/assets/4df04f27-f4e0-44a5-a0ba-d59b5434ccaa" />
+
 
