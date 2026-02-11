@@ -1,0 +1,38 @@
+# Bytecode / cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Virtual env
+venv/
+.venv/
+env/
+
+# Secrets & local config
+.env
+!.env.example
+
+# Logs & generated data
+logs/
+*.log
+rag/vector_store/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Build / dist
+build/
+dist/
+*.egg-info/
+*.egg
+
+# OS
+.DS_Store
+Thumbs.db
