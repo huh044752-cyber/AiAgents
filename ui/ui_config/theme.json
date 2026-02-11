@@ -1,0 +1,20 @@
+{
+  "_comment": "主题颜色配置 - 修改此文件可自定义整个 UI 的配色方案",
+  "colors": {
+    "primary": "#58a6ff",
+    "primary_hover": "rgba(88,166,255,0.15)",
+    "primary_active": "rgba(88,166,255,0.25)",
+    "bg_dark": "#0e1117",
+    "bg_card": "#161b22",
+    "bg_card_alt": "#1c2333",
+    "border": "#30363d",
+    "text_primary": "#f0f6fc",
+    "text_secondary": "#c9d1d9",
+    "text_muted": "#8b949e",
+    "success": "#3fb950",
+    "warning": "#d29922",
+    "error": "#f85149",
+    "chat_user_bg": "linear-gradient(135deg, #1f6feb, #388bfd)",
+    "chat_ai_bg": "#161b22"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "_comment": "C++ AiHttpService REST API 端点列表 - 新增端点后在此注册",
+  "endpoints": [
+    {"method": "GET",  "path": "/api/health",                                "name": "健康检查",   "desc": "检查引擎服务是否正常运行"},
+    {"method": "GET",  "path": "/api/simulation/status",                     "name": "仿真状态",   "desc": "获取引擎运行状态和仿真时间"},
+    {"method": "GET",  "path": "/api/world_state",                           "name": "全局态势",   "desc": "获取所有单元完整态势数据"},
+    {"method": "GET",  "path": "/api/units",                                 "name": "单元列表",   "desc": "获取所有单元的摘要信息"},
+    {"method": "GET",  "path": "/api/unit/{name}/state",                     "name": "单元详情",   "desc": "获取指定单元的完整状态"},
+    {"method": "GET",  "path": "/api/unit/{name}/equipment/{entity}/query",  "name": "装备查询",   "desc": "查询指定装备的参数状态"},
+    {"method": "GET",  "path": "/api/unit/{name}/radar/{entity}/detail",     "name": "雷达详情",   "desc": "获取雷达频率/功率/波束等参数"},
+    {"method": "GET",  "path": "/api/unit/{name}/jammer/{entity}/detail",    "name": "干扰机详情", "desc": "获取干扰机功率/频率/波束等参数"},
+    {"method": "GET",  "path": "/api/unit/{name}/weapon/{entity}/status",    "name": "武器状态",   "desc": "查询弹药可用性和交战状态"},
+    {"method": "GET",  "path": "/api/unit/{name}/comm/{entity}/detail",      "name": "通信详情",   "desc": "获取通信设备频率/功率/方式"},
+    {"method": "POST", "path": "/api/unit/{name}/equipment/{entity}/control","name": "装备控制",   "desc": "开关机/故障设置/参数调整"},
+    {"method": "POST", "path": "/api/unit/{name}/alter",                     "name": "修改单元",   "desc": "直接修改位置/姿态/速度/激活"},
+    {"method": "POST", "path": "/api/unit/{name}/mission",                   "name": "下达任务",   "desc": "新增/终止/推迟/调整任务"},
+    {"method": "POST", "path": "/api/unit/{name}/platform/move_to_pos",      "name": "飞往坐标",   "desc": "命令平台飞往经纬高坐标"},
+    {"method": "POST", "path": "/api/unit/{name}/platform/move_to_dir",      "name": "按航向飞行", "desc": "命令平台朝指定航向飞行"},
+    {"method": "POST", "path": "/api/unit/{name}/platform/patrol",           "name": "空域巡逻",   "desc": "命令平台在指定空域巡逻"},
+    {"method": "POST", "path": "/api/unit/{name}/platform/return_land",      "name": "返航着陆",   "desc": "命令平台返航至机场着陆"},
+    {"method": "POST", "path": "/api/unit/{name}/platform/formation",        "name": "编队飞行",   "desc": "命令平台跟随长机编队"},
+    {"method": "POST", "path": "/api/unit/{name}/platform/locate",           "name": "设置位置",   "desc": "直接设置平台位置和姿态"},
+    {"method": "POST", "path": "/api/unit/{name}/jammer/{entity}/command",   "name": "干扰指令",   "desc": "发送干扰方向/类型/时长指令"},
+    {"method": "POST", "path": "/api/unit/{name}/weapon/{entity}/lock",      "name": "武器锁定",   "desc": "武器系统锁定目标"},
+    {"method": "POST", "path": "/api/unit/{name}/weapon/{entity}/launch",    "name": "武器发射",   "desc": "发射弹药攻击已锁定目标"},
+    {"method": "POST", "path": "/api/unit/{name}/weapon/{entity}/abort",     "name": "中止交战",   "desc": "中止当前武器交战过程"}
+  ]
+}

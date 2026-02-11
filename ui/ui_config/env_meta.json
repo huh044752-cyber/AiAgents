@@ -1,0 +1,26 @@
+{
+  "_comment": "环境变量元信息 - 定义每个 .env 变量的中文名、说明、分组、类型、选项，用于设置页面渲染",
+  "variables": [
+    {"key": "DASHSCOPE_API_KEY",       "label": "DashScope API Key",     "desc": "通义千问的 API 密钥，用于调用 LLM 和 Embedding 模型",       "group": "LLM",    "type": "password"},
+    {"key": "QWEN_MODEL_NAME",         "label": "LLM 模型名称",          "desc": "通义千问模型名称",                                            "group": "LLM",    "type": "select", "options": ["qwen-plus", "qwen-turbo", "qwen-max", "qwen-long", "qwen-vl-plus"]},
+    {"key": "LLM_TEMPERATURE",         "label": "Temperature",           "desc": "LLM 生成温度(0~1)，越低越确定，越高越随机。推荐 0.2~0.5",    "group": "LLM",    "type": "slider",  "min": 0.0, "max": 1.0, "step": 0.05, "default": "0.3"},
+    {"key": "LLM_TOP_P",              "label": "Top P",                  "desc": "核采样概率阈值(0~1)，与 Temperature 配合控制生成多样性",      "group": "LLM",    "type": "slider",  "min": 0.0, "max": 1.0, "step": 0.05, "default": "0.8"},
+    {"key": "SIM_ENGINE_HOST",         "label": "仿真引擎地址",           "desc": "C++ 仿真引擎 HTTP 服务的 IP 地址或主机名",                    "group": "引擎",   "type": "text",    "default": "localhost"},
+    {"key": "SIM_ENGINE_PORT",         "label": "仿真引擎端口",           "desc": "C++ AiHttpService 监听的 HTTP 端口号",                        "group": "引擎",   "type": "number",  "min": 1, "max": 65535, "step": 1, "default": "8080"},
+    {"key": "SIM_ENGINE_HTTP_TIMEOUT", "label": "HTTP 超时(秒)",          "desc": "MCP 工具调用 C++ 引擎时的 HTTP 请求超时时间",                 "group": "引擎",   "type": "number",  "min": 1.0, "max": 120.0, "step": 1.0, "default": "10.0"},
+    {"key": "AGENT_MAX_ITERATIONS",    "label": "Agent 最大迭代次数",     "desc": "单次任务中 Commander-Tactical-Executor 循环的最大次数",       "group": "Agent",  "type": "number",  "min": 1, "max": 500, "step": 10, "default": "50"},
+    {"key": "AGENT_TIMEOUT_SECONDS",   "label": "Agent 超时(秒)",         "desc": "单次任务的全局超时时间",                                      "group": "Agent",  "type": "number",  "min": 5, "max": 600, "step": 5, "default": "30"},
+    {"key": "RAG_EMBEDDING_MODEL",     "label": "Embedding 模型",         "desc": "用于知识库向量化的 DashScope 文本嵌入模型名称",               "group": "RAG",    "type": "select",  "options": ["text-embedding-v3", "text-embedding-v2", "text-embedding-v1"]},
+    {"key": "RAG_CHUNK_SIZE",          "label": "RAG 分块大小(字符)",     "desc": "知识文档切分时每块的最大字符数，影响检索精度",                 "group": "RAG",    "type": "number",  "min": 100, "max": 4000, "step": 100, "default": "800"},
+    {"key": "RAG_CHUNK_OVERLAP",       "label": "RAG 分块重叠(字符)",     "desc": "相邻分块之间的重叠字符数，避免上下文截断",                    "group": "RAG",    "type": "number",  "min": 0, "max": 500, "step": 50, "default": "100"},
+    {"key": "RAG_RETRIEVE_TOP_K",      "label": "RAG 检索 Top-K",        "desc": "每次检索返回的最相关知识片段数量",                              "group": "RAG",    "type": "number",  "min": 1, "max": 20, "step": 1, "default": "3"},
+    {"key": "RAG_KNOWLEDGE_BASE_DIR",  "label": "知识库目录",             "desc": "存放 .md/.json 知识文档的目录。留空使用默认路径: AiAgent/rag/knowledge_base。支持绝对路径(如 D:\\data\\kb)或相对于项目根目录的相对路径",  "group": "RAG",    "type": "text",  "default": "", "placeholder": "留空=默认路径 rag/knowledge_base"},
+    {"key": "RAG_VECTOR_STORE_DIR",    "label": "向量库目录",             "desc": "FAISS 向量索引持久化存储目录。留空使用默认路径: AiAgent/rag/vector_store。支持绝对路径或相对路径",  "group": "RAG",    "type": "text",  "default": "", "placeholder": "留空=默认路径 rag/vector_store"},
+    {"key": "LOG_LEVEL",               "label": "控制台日志级别",         "desc": "控制台输出的最低日志级别",                                      "group": "日志",   "type": "select",  "options": ["DEBUG", "INFO", "WARNING", "ERROR"]},
+    {"key": "LOG_FILE_LEVEL",          "label": "文件日志级别",           "desc": "日志文件记录的最低级别，通常设为 DEBUG 以保留完整记录",         "group": "日志",   "type": "select",  "options": ["DEBUG", "INFO", "WARNING", "ERROR"]},
+    {"key": "LOG_DIR",                 "label": "日志目录",               "desc": "日志文件保存目录。留空使用默认路径: AiAgent/logs。支持绝对路径或相对路径",  "group": "日志",   "type": "text",  "default": "", "placeholder": "留空=默认路径 logs"},
+    {"key": "LOG_ROTATION",            "label": "日志轮转大小",           "desc": "单个日志文件的最大大小，超过后自动轮转，例如 50 MB",           "group": "日志",   "type": "text",    "default": "50 MB"},
+    {"key": "LOG_RETENTION",           "label": "日志保留时间",           "desc": "旧日志文件的保留时长，例如 7 days / 30 days",                  "group": "日志",   "type": "text",    "default": "7 days"},
+    {"key": "REPLAY_DIR",              "label": "回放记录目录",           "desc": "Agent MCP 调用序列的回放记录保存目录。留空使用默认路径: AiAgent/replays。支持绝对路径或相对路径",  "group": "回放",   "type": "text",  "default": "", "placeholder": "留空=默认路径 replays"}
+  ]
+}

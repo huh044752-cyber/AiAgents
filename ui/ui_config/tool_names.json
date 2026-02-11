@@ -1,0 +1,26 @@
+{
+  "_comment": "MCP 工具中文名称和描述映射 - 新增工具后在此添加对应中文说明",
+  "tools": {
+    "get_world_state":           {"cn_name": "获取全局态势",   "cn_desc": "查询当前战场所有单元的位置、姿态、速度、装备等完整态势信息"},
+    "get_unit_state":            {"cn_name": "获取单元状态",   "cn_desc": "查询指定单元的完整状态：位置、姿态、速度、装备列表"},
+    "get_units_list":            {"cn_name": "获取单元列表",   "cn_desc": "获取所有作战单元摘要：ID、名称、类型、阵营、存活"},
+    "query_equipment":           {"cn_name": "查询装备状态",   "cn_desc": "查询指定单元上特定装备的类型、开关状态等信息"},
+    "get_simulation_status":     {"cn_name": "获取仿真状态",   "cn_desc": "查询仿真引擎运行状态和当前仿真时间"},
+    "get_radar_detail":          {"cn_name": "雷达详细参数",   "cn_desc": "获取雷达频率、功率、波束宽度、增益等射频参数"},
+    "get_jammer_detail":         {"cn_name": "干扰机详细参数", "cn_desc": "获取干扰机干扰功率、频率范围、波束宽度等参数"},
+    "get_weapon_status":         {"cn_name": "武器系统状态",   "cn_desc": "查询武器弹药可用性、当前交战状态"},
+    "get_comm_detail":           {"cn_name": "通信设备详情",   "cn_desc": "获取通信设备频率、功率、通信方式等参数"},
+    "control_equipment":         {"cn_name": "装备开关控制",   "cn_desc": "控制装备开关机、设置故障、调整参数"},
+    "alter_unit":                {"cn_name": "修改单元状态",   "cn_desc": "直接修改单元位置、姿态、速度、激活状态"},
+    "assign_mission":            {"cn_name": "下达任务",       "cn_desc": "为单元新增/终止/推迟/调整任务"},
+    "platform_move_to_pos":      {"cn_name": "飞往坐标点",     "cn_desc": "命令平台飞往指定经纬高坐标"},
+    "platform_move_to_direction":{"cn_name": "按航向飞行",     "cn_desc": "命令平台朝指定航向/高度/速度飞行"},
+    "platform_patrol":           {"cn_name": "空域巡逻",       "cn_desc": "命令平台在指定空域执行巡逻任务"},
+    "platform_return_land":      {"cn_name": "返航着陆",       "cn_desc": "命令平台直接返航或原路返航至机场"},
+    "platform_formation":        {"cn_name": "编队飞行",       "cn_desc": "命令平台跟随长机编队飞行"},
+    "jammer_command":            {"cn_name": "干扰指令",       "cn_desc": "向干扰机发送干扰方向、类型、时长等指令"},
+    "weapon_lock_target":        {"cn_name": "武器锁定目标",   "cn_desc": "武器系统锁定指定目标（锁定不等于发射）"},
+    "weapon_launch":             {"cn_name": "武器发射",       "cn_desc": "发射弹药攻击已锁定目标（需确认包线内）"},
+    "weapon_abort":              {"cn_name": "中止交战",       "cn_desc": "中止当前武器系统的交战过程"}
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "_comment": "知识库文档分类体系 - 可自由增删分类，每个分类包含: label(中文名), icon(图标), prefix(文件名前缀), keywords(匹配关键词), template(模板文件名)",
+  "categories": {
+    "tactics": {
+      "label": "战术条令",
+      "icon": "🎯",
+      "prefix": "战术条令",
+      "keywords": ["tactic", "战术", "条令", "战法"],
+      "template": "tactics.md"
+    },
+    "radar_manual": {
+      "label": "雷达手册",
+      "icon": "📡",
+      "prefix": "装备使用手册_雷达",
+      "keywords": ["radar", "雷达"],
+      "template": "radar_manual.md"
+    },
+    "ew_manual": {
+      "label": "电子战手册",
+      "icon": "📻",
+      "prefix": "装备使用手册_电子战",
+      "keywords": ["jam", "干扰", "电子战", "ecm"],
+      "template": "ew_manual.md"
+    },
+    "weapon_manual": {
+      "label": "武器手册",
+      "icon": "💣",
+      "prefix": "装备使用手册_武器",
+      "keywords": ["weapon", "武器", "弹药", "导弹"],
+      "template": "weapon_manual.md"
+    },
+    "comm_manual": {
+      "label": "通信手册",
+      "icon": "📞",
+      "prefix": "装备使用手册_通信",
+      "keywords": ["comm", "通信", "数据链"],
+      "template": "comm_manual.md"
+    },
+    "historical_case": {
+      "label": "历史案例",
+      "icon": "📖",
+      "prefix": "历史案例",
+      "keywords": ["case", "案例", "历史"],
+      "template": "historical_case.md"
+    },
+    "flight_manual": {
+      "label": "飞行手册",
+      "icon": "✈️",
+      "prefix": "飞行手册",
+      "keywords": ["flight", "飞行", "航路", "空域"],
+      "template": "flight_manual.md"
+    },
+    "general": {
+      "label": "通用文档",
+      "icon": "📄",
+      "prefix": "通用文档",
+      "keywords": [],
+      "template": "general.md"
+    }
+  }
+}
